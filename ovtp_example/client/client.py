@@ -16,5 +16,5 @@ class Client:
 
     async def action(self, message):
         result = await self.oec.send_message(json.dumps(message), timeout=2, retry=2)
-        await self.oec.close_connection()
+        # await self.oec.close_connection()
         return f"Result is: {result}"
